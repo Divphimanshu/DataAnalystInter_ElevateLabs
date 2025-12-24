@@ -1,4 +1,4 @@
-# Data Analyst Intern — Elevate Labs
+# Data Analyst Intern — Elevate Labs - Mini Projects
 
 ## 📊 Overview
 This repository contains projects completed during my **Data Analyst Internship at Elevate Labs**.  
