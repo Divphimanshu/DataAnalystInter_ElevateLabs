@@ -1,0 +1,34 @@
+-- Query 1: Top 5 NOCs (Countries) by Total Medals Won
+SELECT
+    NOC,
+    COUNT(Medal) AS Total_Medals
+FROM
+    athlete_events
+WHERE
+    Medal <> 'NA' -- Excludes all entries where no medal was won (Medal is NULL or 'NA')
+GROUP BY
+    NOC
+ORDER BY
+    Total_Medals DESC
+LIMIT 5;
+
+-- Query 2: Total Number of Unique Athletes
+SELECT
+    COUNT(DISTINCT ID) AS Total_Unique_Athletes
+FROM
+    athlete_events;
+
+-- Query 3: Details of the Oldest Gold Medal Winner
+SELECT
+    Name,
+    Age,
+    Sport,
+    Year,
+    City
+FROM
+    athlete_events
+WHERE
+    Medal = 'Gold'
+ORDER BY
+    Age DESC
+LIMIT 1;
